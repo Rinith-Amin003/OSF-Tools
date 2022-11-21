@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# installed packages
+package-installed.json
+
 # testing
 /coverage
 
