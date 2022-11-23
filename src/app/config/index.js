@@ -1,3 +1,3 @@
 export const apiMapping = {
-    files: ['create', 'upload', 'delete', 'files']
+    files: ['create', 'upload', 'delete', 'get']
 }
