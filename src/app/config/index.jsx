@@ -4,5 +4,6 @@ export const apiMapping = {
 }
 
 export const defaultConfig = {
-    defaultPage: 'home'
+    defaultPage: 'home',
+    server: 'http://localhost:3000'
 }
