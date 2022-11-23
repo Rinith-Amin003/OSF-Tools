@@ -1,4 +1,8 @@
 export const apiMapping = {
-    files: ['create', 'upload', 'delete', 'list'],
-    countries: ['create', 'update', 'delete', 'list']
+    files: ['home', 'create', 'upload', 'delete', 'list'],
+    countries: ['home', 'create', 'update', 'delete', 'list']
+}
+
+export const defaultConfig = {
+    defaultPage: 'home'
 }

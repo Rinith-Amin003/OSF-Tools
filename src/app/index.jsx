@@ -5,7 +5,7 @@ import {
 import Home from './pages/home';
 import NoPage from './pages/noPage';
 import * as Pages from './pages';
-import { apiMapping } from './config';
+import { apiMapping, defaultConfig } from './config';
 import './index.css';
 
 
@@ -20,7 +20,8 @@ function App(props) {
           Object.keys(apiMapping).map(page => {
             return apiMapping[page].map((route) => {
               const Widget = Pages[page][route];
-              return <Route key={`/${page}/${route}`} path={`/${page}/${route}`} element={<Widget />} />
+              const newRoute = route !== defaultConfig.defaultPage ? `/${page}/${route}` : `/${page}`;
+              return <Route key={newRoute} path={newRoute} element={<Widget />} />
             })
           })
             .map(page => page)
