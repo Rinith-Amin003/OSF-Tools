@@ -6,6 +6,6 @@ import UploadFile from '../components/files/uploadFile';
 export {
     CreateFolder as create,
     DeleteFile as delete,
-    GetFiles as get,
+    GetFiles as list,
     UploadFile as upload
 }

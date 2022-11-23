@@ -20,9 +20,10 @@ function App(props) {
           Object.keys(apiMapping).map(page => {
             return apiMapping[page].map((route) => {
               const Widget = Pages[page][route];
-              return <Route path={`/${page}/${route}`} element={<Widget />} />
+              return <Route key={`/${page}/${route}`} path={`/${page}/${route}`} element={<Widget />} />
             })
-          })[0]
+          })
+            .map(page => page)
         }
         <Route path='*' element={<NoPage />} />
       </Routes>
