@@ -2,7 +2,7 @@ import CreateFolder from '../components/files/createFolder';
 import DeleteFile from '../components/files/deleteFile';
 import GetFiles from '../components/files/getFiles';
 import UploadFile from '../components/files/uploadFile';
-import FilesHomePage from '../components/files';
+import FilesHomePage from '../components/files/index';
 
 export {
     CreateFolder as create,
