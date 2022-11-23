@@ -1,13 +1,32 @@
 import React from 'react';
+import {
+  BrowserRouter as Router, Routes, Route
+} from "react-router-dom";
+import Home from './pages/home';
+import NoPage from './pages/noPage';
+import * as Pages from './pages';
+import { apiMapping } from './config';
 import './index.css';
-import * as Pages from './pages'
 
-function App() {
-  const Widget = Pages['files']['create'];
+
+
+function App(props) {
+
   return (
-    <div className="App">
-      <Widget/>
-    </div >
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {
+          Object.keys(apiMapping).map(page => {
+            return apiMapping[page].map((route) => {
+              const Widget = Pages[page][route];
+              return <Route path={`/${page}/${route}`} element={<Widget />} />
+            })
+          })[0]
+        }
+        <Route path='*' element={<NoPage />} />
+      </Routes>
+    </Router>
   );
 }
 

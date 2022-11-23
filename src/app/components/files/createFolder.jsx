@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const CreateFolder = (props) => {
-    return (<div> CreateFolder </div>);
+    return (
+        <Link to={'welcome'} >CreateFolder</Link>
+    );
 }
 
 export default CreateFolder;
