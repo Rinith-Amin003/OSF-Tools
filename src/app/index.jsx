@@ -11,7 +11,6 @@ import './index.css';
 
 
 function App(props) {
-
   return (
     <Router>
       <Routes>
@@ -20,7 +19,7 @@ function App(props) {
           Object.keys(apiMapping).map(page => {
             return apiMapping[page].map((route) => {
               const Widget = Pages[page][route];
-              const newRoute = route !== defaultConfig.defaultPage ? `/${page}/${route}` : `/${page}`;
+              const newRoute = route === defaultConfig.defaultPage ? `/${page}` : `/${page}/${route}`;
               return <Route key={newRoute} path={newRoute} element={<Widget />} />
             })
           })

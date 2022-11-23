@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FilesHomePage = (props) => {
-    return (<>Countriess Home Page</>);
+    return (<>Files Home Page</>);
 }
 
 export default FilesHomePage;
