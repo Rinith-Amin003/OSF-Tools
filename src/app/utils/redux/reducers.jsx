@@ -1,10 +1,14 @@
 const initialState = {};
 
-const reducer = (state = initialState, action) => {
+const appRepository = (state = initialState, action) => {
     switch (action.type) {
-        case 'lastAction':
+        case 'credentials':
             return Object.assign({}, state, {
-                action: action.type
+                credentials: action.payload
+            })
+        case 'accessToken':
+            return Object.assign({}, state, {
+                credentials: {...state.credentials, accessToken: action.payload}
             })
         case 'data':
             return Object.assign({}, state, {
@@ -14,4 +18,4 @@ const reducer = (state = initialState, action) => {
             return state;
     }
 }
-export default reducer;
+export default appRepository;
